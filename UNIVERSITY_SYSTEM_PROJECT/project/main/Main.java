@@ -2,9 +2,10 @@ package main;
 
 import users.UserDatabase;
 import users.User;
-import users.Manager;
 import users.Student;
 import java.util.Scanner;
+
+import employee.Manager;
 
 public class Main {
 	public static void main(String[] args) {
@@ -22,9 +23,6 @@ public class Main {
 		manager.authenticate(userlogin, userpassword);
 		
 		
-		
-		
-
 	}
 
 }

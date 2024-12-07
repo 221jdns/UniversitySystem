@@ -1,7 +1,14 @@
-package users;
+package employee;
+
+import java.util.List;
+
+import study.Course;
+import users.UserDatabase;
 
 public class Manager {
     private final UserDatabase database;
+    private List<Course> courses;
+
 
     public Manager() {
         this.database = UserDatabase.getInstance();
@@ -20,5 +27,18 @@ public class Manager {
         }
         return false;
     }
+    
+    public void addCourseForRegistration(Course course, String major, int yearOfStudy) {
+        course.setMajor(major);
+        course.setYearOfStudy(yearOfStudy);
+        courses.add(course);
+        System.out.println("Course " + course.getCourseName() + " added for major: " + major + ", year: " + yearOfStudy);
+    }
+
+    public List<Course> getAvailableCourses() {
+        return courses;
+    }
+    
+    
 }
 

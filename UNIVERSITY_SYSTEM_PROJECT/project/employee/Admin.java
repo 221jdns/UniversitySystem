@@ -1,6 +1,9 @@
-package users;
+package employee;
 
-public class Admin extends User {
+import users.User;
+import users.UserDatabase;
+
+public class Admin extends Employee {
     private final UserDatabase database;
 
     public Admin(String login, String password) {
@@ -13,15 +16,6 @@ public class Admin extends User {
         System.out.println("Пользователь " + login + " добавлен.");
     }
 
-	@Override
-	public String getLogin() {
-		return null;
-	}
-
-	@Override
-	public String getPassword() {
-		return null;
-	}
 }
 
 

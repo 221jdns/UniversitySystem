@@ -1,18 +1,18 @@
-package users;
+package employee;
 
-public abstract class User {
+public abstract class Employee {
     protected String login;
     protected String password;
     protected String id;
     protected String name;
     protected String email;
     
-    public User(String login, String password) {
+    public Employee(String login, String password) {
     	this.login = login;
     	this.password = password;
     }
     
-    public User(String login, String password,String id, String name, String email) {
+    public Employee(String login, String password,String id, String name, String email) {
     	this.login = login;
     	this.password = password;
     	this.id = id;
@@ -20,8 +20,7 @@ public abstract class User {
     	this.email = email;
     }
     
-    public abstract String getLogin();
-    public abstract String getPassword();
-    
-    
+	
+	
+	
 }
